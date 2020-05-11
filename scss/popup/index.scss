@@ -1,0 +1,45 @@
+$pink-color: #d9828e;
+$blue-color: rgb(0, 206, 178);
+$background-smoke: #f0f0f0;
+body {
+    background-color: $background-smoke;
+    .container {
+        width: 400px;
+        padding: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+        .content {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            select,
+            input {
+                width: 200px;
+                height: 35px;
+                padding: 0 5px 0 5px;
+                border: none;
+                border-radius: 5px;
+                box-shadow: 1px 1px 20px 1px $background-smoke;
+                transition: box-shadow .5s;
+            }
+            select:focus,
+            input:focus {
+                border: $blue-color 2px solid !important;
+                outline: none;
+                box-shadow: 1px 1px 7px $blue-color !important;
+            }
+            label {
+                margin-bottom: 0;
+            }
+        }
+        .preview {
+            width: 50%;
+            margin: 30px 10px 10px 10px;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+    }
+}

@@ -1,0 +1,43 @@
+{
+    "manifest_version": 2,
+    "name": "Change Messenger Theme",
+    "version": "2.0.0",
+
+    "description": "A small tool changing the messenger's background",
+    "icons": {
+        "16": "icon.png",
+        "48": "icon.png",
+        "128": "icon.png"
+    },
+
+    "browser_action": {
+        "default_icon": {
+            "16": "icon.png",
+            "48": "icon.png",
+            "32": "icon.png"
+        },
+        "default_title": "Messenger's Background tol",
+        "default_popup": "index.html"
+    },
+
+
+    "author": "Nghiacangao_btteam",
+    "background": {
+        "scripts": ["background.js"],
+        "persistent": false
+    },
+    "content_scripts": [{
+        "matches": [
+            "https://www.messenger.com/t/*",
+            "https://www.facebook.com/messages/t/*"
+        ],
+        "js": ["content.js"],
+        "css": ["/css/contentCss/contentCss.css"],
+        "all_frames": true
+    }],
+    "permissions": [
+        "tabs",
+        "storage",
+        "contextMenus"
+    ]
+}
