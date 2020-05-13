@@ -1,0 +1,26 @@
+$pink-color: #d9828e;
+$blue-color: rgb(0, 206, 178);
+$background-smoke: #f0f0f0;
+body {
+    background-color: $background-smoke !important;
+    .code {
+        height: 50vh;
+        width: 100%;
+    }
+    textarea {
+        height: 90%;
+        width: 100%;
+        display: block;
+        padding: 10px;
+        margin-top: 7px;
+        border: none;
+        border-left: $blue-color 2px solid;
+        transition: box-shadow .3s, margin-top .3s;
+    }
+    textarea:focus {
+        margin-top: 0px;
+        box-shadow: 1px 1px 10px $background-smoke;
+        border-radius: 5px;
+        outline: none;
+    }
+}

@@ -1,49 +1,72 @@
-function getDataFromLocalStorage() {
-    return new Promise((resolve, reject) => {
-        chrome.storage.sync.get((result) => {
-            if (result != {}) {
-                resolve(result);
-            } else reject("undeclared");
-        });
-    });
-}
-
-function setDefaultData() {
-    chrome.storage.sync.set({ image_url: "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcR-oaHgm4S1og3e3fm8URuWubjdCrYIdgxC4pgqoChBXm4krQiV&usqp=CAU" });
-}
-
-
-function setCustomData(CUSTOM_GLOBAL_DATA, itemsChange) {
-    for (let key in CUSTOM_GLOBAL_DATA) {
-        for (let item in itemsChange) {
-            if (key == item) {
-                CUSTOM_GLOBAL_DATA[key] = itemsChange[key];
-            }
-        }
-    }
-    chrome.storage.sync.set(CUSTOM_GLOBAL_DATA);
-}
-
-async function setImage(url) {
+async function setDefaultImage(url) {
     if (url.length > 300) {
         alert("Too long url");
         return;
     }
-    getDataFromLocalStorage()
-        .then((result) => {
-            setCustomData(result, { image_url: url })
-        })
+    setCustomData({ image_url: url });
 }
+async function setPersonImage(url) {
+    if (url.length > 300) {
+        alert("Too long url");
+        return;
+    }
+    let userId = prompt("Enter your friend id: ");
+    if (!userId) return;
+
+    setFriendImage(url, userId);
+}
+chrome.runtime.onInstalled.addListener((detail) => {
+    if (detail.reason == "install") {
+        setDefaultData();
+        chrome.notifications.create("", {
+            type: "basic",
+            iconUrl: "icon.png",
+            title: "Thank for your installing",
+            message: "Let change your Messenger's appearance now"
+        });
+    } else if (detail.reason == "update") {
+        chrome.notifications.create("", {
+            type: "basic",
+            iconUrl: "icon.png",
+            title: "Thank for your updating",
+            message: "Let change your Messenger's appearance now"
+        });
+    }
+});
+
 chrome.contextMenus.removeAll();
 chrome.contextMenus.create({
     type: "normal",
-    title: "Select this image to set Messenger's background",
+    title: "Set Messenger's background",
     contexts: ["image"],
-    id: "saveImage"
+    id: "setDefaultImage"
+});
+
+chrome.contextMenus.create({
+    type: "normal",
+    title: "Set for special person",
+    contexts: ["image"],
+    id: "setPersonImage"
 });
 
 chrome.contextMenus.onClicked.addListener(function(info, tab) {
-    console.log(info);
-    console.log(tab);
-    if (info.menuItemId == "saveImage") setImage(info.srcUrl)
+    if (info.menuItemId == "setDefaultImage") setDefaultImage(info.srcUrl);
+    if (info.menuItemId == "setPersonImage") setPersonImage(info.srcUrl);
 });
+
+function getId(url) {
+    let parts = url.split("/");
+    return parts[parts.length - 1];
+}
+
+chrome.tabs.onUpdated.addListener(
+    function(tabId, changeInfo, tab) {
+        // console.log(changeInfo);
+        if (changeInfo.status == "complete") {
+            chrome.tabs.sendMessage(tabId, {
+                command: 'uid',
+                id: getId(tab.url)
+            })
+        }
+    }
+);

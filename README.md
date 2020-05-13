@@ -10,4 +10,5 @@
     - Demo
     - You can see this initial project [here](https://github.com/NghiaCaNgao/theMes/tree/master/app)
 ## Acknowledge
-    -BTteam_Bantotcoder
+    - BTteam_Bantotcoder
+    - A special thanks to my friend - Tuấn Anh
