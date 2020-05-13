@@ -4,6 +4,9 @@
 </p>
 
 ## Changelog
+### 2.1.0 
+    - Feature Multi-background: Each friend each image
+    - Custom Css: Design messenger's appearance yourself
 ### 2.0.0
     - Rebuilt App
 ### 1.0.0
