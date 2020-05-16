@@ -1,0 +1,74 @@
+::-webkit-scrollbar {
+  width: 5px;
+  border-radius: 2px;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #585858;
+  border-radius: 2px;
+}
+
+body {
+  background-image: url("https://www.yourtrainingedge.com/wp-content/uploads/2019/05/background-calm-clouds-747964.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+
+.m-nav {
+  padding-top: 10px;
+}
+
+.m-nav .l-btn {
+  text-decoration: none;
+  color: #d9828e !important;
+  font-size: 1.2em;
+  width: 50px;
+  height: 50px;
+  margin: 0 10px 10px 10px;
+  border-radius: 8px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transition: border .5s, background .5s, margin .5s, -webkit-box-shadow .5s;
+  transition: border .5s, background .5s, margin .5s, -webkit-box-shadow .5s;
+  transition: border .5s, box-shadow .5s, background .5s, margin .5s;
+  transition: border .5s, box-shadow .5s, background .5s, margin .5s, -webkit-box-shadow .5s;
+}
+
+.m-nav .l-btn:hover {
+  color: white !important;
+  margin-top: -2px;
+  border: none;
+  background-color: #00ceb2;
+  -webkit-box-shadow: 1px 1px 15px #00ceb2;
+          box-shadow: 1px 1px 15px #00ceb2;
+  cursor: pointer;
+}
+
+.m-nav .l-active {
+  color: white !important;
+  background-color: #d9828e;
+  border: none;
+  -webkit-box-shadow: 1px 1px 15px #d9828e;
+          box-shadow: 1px 1px 15px #d9828e;
+}
+
+.m-nav .l-active:hover {
+  margin-top: -2px;
+  -webkit-box-shadow: 1px 1px 15px #d9828e;
+          box-shadow: 1px 1px 15px #d9828e;
+  border: none;
+  background-color: #d9828e;
+  cursor: pointer;
+}
+/*# sourceMappingURL=common.css.map */

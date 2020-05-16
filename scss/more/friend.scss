@@ -1,0 +1,60 @@
+$pink-color: #d9828e;
+$blue-color: rgb(0, 206, 178);
+$background-smoke: #f0f0f0;
+.wrap {
+    max-height: 80vh;
+    overflow-y: scroll;
+}
+
+input {
+    background-color: rgba(255, 255, 255, 0.856);
+    width: 200px;
+    height: 35px;
+    padding: 0 5px 0 5px;
+    border: none;
+    border-radius: 5px;
+    transition: box-shadow .5s;
+}
+
+input:focus {
+    border: $blue-color 2px solid !important;
+    outline: none;
+    box-shadow: 1px 1px 7px $blue-color !important;
+}
+
+.tool {
+    button {
+        width: 40px;
+        height: 40px;
+        border: none;
+        border-radius: 20px;
+        margin-left: 15px;
+        background: transparent;
+        color: rgba(255, 255, 255, 0.5);
+    }
+    button:hover {
+        color: white;
+        &.blue {
+            background-color: $blue-color;
+            box-shadow: 1px 1px 15px $blue-color;
+        }
+        &.red {
+            background-color: $pink-color;
+            box-shadow: 1px 1px 15px $pink-color;
+        }
+    }
+}
+
+.panel {
+    background: rgba(255, 255, 255, 0.5);
+    margin: 10px;
+    border-radius: 5px;
+}
+
+.panel:hover {
+    background-color: #edf7f8af
+}
+
+label {
+    margin-bottom: 0;
+}

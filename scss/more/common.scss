@@ -1,0 +1,60 @@
+$pink-color: #d9828e;
+$blue-color: rgb(0, 206, 178);
+$background-smoke: #f0f0f0;
+::-webkit-scrollbar {
+    width: 5px;
+    border-radius: 2px;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgb(88, 88, 88);
+    border-radius: 2px;
+}
+
+body {
+    background-image: url("https://www.yourtrainingedge.com/wp-content/uploads/2019/05/background-calm-clouds-747964.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+
+.m-nav {
+    padding-top: 10px;
+    .l-btn {
+        text-decoration: none;
+        color: $pink-color !important;
+        font-size: 1.2em;
+        width: 50px;
+        height: 50px;
+        margin: 0 10px 10px 10px;
+        border-radius: 8px;
+        display: flex;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        transition: border .5s, box-shadow .5s, background .5s, margin .5s;
+    }
+    .l-btn:hover {
+        color: white !important;
+        margin-top: -2px;
+        border: none;
+        background-color: $blue-color;
+        box-shadow: 1px 1px 15px $blue-color;
+        cursor: pointer;
+    }
+    .l-active {
+        color: white !important;
+        background-color: $pink-color;
+        border: none;
+        box-shadow: 1px 1px 15px $pink-color;
+    }
+    .l-active:hover {
+        margin-top: -2px;
+        box-shadow: 1px 1px 15px $pink-color;
+        border: none;
+        background-color: $pink-color;
+        cursor: pointer;
+    }
+}

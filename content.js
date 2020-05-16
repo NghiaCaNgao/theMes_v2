@@ -10,7 +10,7 @@ window.onload = function() {
 
     function setBackground(image_url) {
         let background = document.querySelector("._4sp8");
-        background.style.backgroundImage = `url("${image_url}")`
+        if (background) background.style.backgroundImage = `url("${image_url}")`
     }
 
     function initial() {
