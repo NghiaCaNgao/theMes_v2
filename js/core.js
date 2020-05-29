@@ -68,15 +68,10 @@ async function setDefaultData() {
 }
 
 async function setStyleMode(mode) {
-    getDataFromLocalStorage()
-        .then((result) => {
-            result.style_mode = mode;
-            [result.css, result.ucss] = [result.ucss, result.css];
-            return result;
-        })
-        .then(o => {
-            setCustomData(o);
-        })
+    let result = await getDataFromLocalStorage();
+    result.style_mode = mode;
+    [result.css, result.ucss] = [result.ucss, result.css];
+    await setCustomData(result);
 }
 
 async function setCustomData(itemsChange) {

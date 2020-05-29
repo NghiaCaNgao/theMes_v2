@@ -19,7 +19,6 @@ style_mode.addEventListener("change", async function() {
     getDataFromLocalStorage()
         .then(result => {
             console.log(result);
-
             body.style.backgroundImage = `url("${result.image_url}")`;
             txaCode.value = result.css;
         });
