@@ -1,7 +1,7 @@
 {
     "manifest_version": 2,
-    "name": "Change Messenger Theme",
-    "version": "2.1.0",
+    "name": "Change Messenger's Theme",
+    "version": "2.1.2",
 
     "description": "A small tool changing the messenger's background",
     "icons": {
@@ -16,7 +16,7 @@
             "48": "icon.png",
             "32": "icon.png"
         },
-        "default_title": "Messenger's Background tol",
+        "default_title": "Messenger's Background tool",
         "default_popup": "index.html"
     },
 

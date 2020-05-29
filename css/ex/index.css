@@ -1,5 +1,7 @@
 body {
+  height: auto;
   background-color: #f0f0f0;
+  position: relative;
 }
 
 body .container {
@@ -31,33 +33,6 @@ body .container .content {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-
-body .container .content select,
-body .container .content input {
-  width: 200px;
-  height: 35px;
-  padding: 0 5px 0 5px;
-  border: none;
-  border-radius: 5px;
-  -webkit-box-shadow: 1px 1px 20px 1px #f0f0f0;
-          box-shadow: 1px 1px 20px 1px #f0f0f0;
-  -webkit-transition: -webkit-box-shadow .5s;
-  transition: -webkit-box-shadow .5s;
-  transition: box-shadow .5s;
-  transition: box-shadow .5s, -webkit-box-shadow .5s;
-}
-
-body .container .content select:focus,
-body .container .content input:focus {
-  border: #00ceb2 2px solid !important;
-  outline: none;
-  -webkit-box-shadow: 1px 1px 7px #00ceb2 !important;
-          box-shadow: 1px 1px 7px #00ceb2 !important;
-}
-
-body .container .content label {
-  margin-bottom: 0;
 }
 
 body .container .preview {

@@ -6,8 +6,8 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link href="/css/more/addCss.css" rel="stylesheet">
-    <link href="/css/more/common.css" rel="stylesheet">
+    <link href="/css/ex/addCss.css" rel="stylesheet">
+    <link href="/css/ex/common.css" rel="stylesheet">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="/assets/lib/css/all.css">
@@ -21,15 +21,22 @@
         <a class="l-btn" href="./friend.html">
             <i class="fas fa-users"></i>
         </a>
-        <a class="l-btn" href="">
+        <a class="l-btn" href="./export.html">
             <i class="fas fa-file-export"></i>
         </a>
     </div>
 
-    <h1 class="display-4 m-3 text-center text-white">Customize Messenger's appearance</h1>
     <div class="container rounded bg-white p-3 mt-5">
         <div class="code">
-            <label>Css code</label>
+            <div class="d-flex justify-content-between">
+                <label>Css code</label>
+                <div class="option">
+                    <select id="style_mode">
+                        <option>Light mode</option>
+                        <option>My mode</option>
+                    </select>
+                </div>
+            </div>
             <textarea spellcheck="false" id="code" class="" placeholder="Insert css code here. If you don't know css, you can quick learn it with some links below."></textarea>
         </div>
     </div>
@@ -46,7 +53,7 @@
     </div>
 
     <script src="/js/core.js"></script>
-    <script src="/js/index.js"></script>
+    <script src="/js/css.js"></script>
 </body>
 
 </html>

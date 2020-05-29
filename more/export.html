@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>export</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="/css/ex/export.css" rel="stylesheet">
+    <link href="/css/ex/common.css" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/lib/css/all.css">
+</head>
+
+<body>
+    <div class="container d-flex justify-content-center m-nav">
+        <a class="l-btn" href="./css.html">
+            <i class="fas fa-terminal"></i>
+        </a>
+        <a class="l-btn" href="./friend.html">
+            <i class="fas fa-users"></i>
+        </a>
+        <a class="l-btn l-active" href="./export.html">
+            <i class="fas fa-file-export"></i>
+        </a>
+    </div>
+
+    <div class="container rounded bg-white p-3 mt-5">
+        <div class="code">
+            <label>Settings json</label>
+            <textarea spellcheck="false" id="code" class="" placeholder="Settings json"></textarea>
+        </div>
+    </div>
+
+    <div class="container rounded bg-white p-2 mt-5 d-flex justify-content-between">
+        <div>
+            <button class="btn btn-success m-1" id="btn_style">Get style</button>
+            <button class="btn btn-info m-1" id="btn_set">Get setting</button>
+            <button class="btn btn-danger m-1" id="btn_restore">Restore settings</button>
+        </div>
+        <div>
+            <button class="btn btn-primary m-1" id="btn_save">Save</button>
+        </div>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="/js/core.js"></script>
+    <script src="/js/export.js"></script>
+</body>
+
+</html>

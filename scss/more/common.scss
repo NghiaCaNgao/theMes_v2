@@ -13,7 +13,6 @@ $background-smoke: #f0f0f0;
 }
 
 body {
-    background-image: url("https://www.yourtrainingedge.com/wp-content/uploads/2019/05/background-calm-clouds-747964.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -34,7 +33,7 @@ body {
         text-align: center;
         align-items: center;
         justify-content: center;
-        transition: border .5s, box-shadow .5s, background .5s, margin .5s;
+        transition: border 0.5s, box-shadow 0.5s, background 0.5s, margin 0.5s;
     }
     .l-btn:hover {
         color: white !important;
@@ -57,4 +56,24 @@ body {
         background-color: $pink-color;
         cursor: pointer;
     }
+}
+
+select,
+input {
+    width: 200px;
+    height: 35px;
+    padding: 0 5px 0 5px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 1px 1px 20px 1px $background-smoke;
+    transition: box-shadow 0.5s;
+}
+select:focus,
+input:focus {
+    border: $blue-color 2px solid !important;
+    outline: none;
+    box-shadow: 1px 1px 7px $blue-color !important;
+}
+label {
+    margin-bottom: 0;
 }

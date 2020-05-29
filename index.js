@@ -1,16 +1,20 @@
 const inp_img = document.getElementById("inp_img");
 const prv_img = document.getElementById("prv_img");
+const style_mode = document.getElementById("style_mode");
 
 async function initial() {
     getDataFromLocalStorage()
         .then((result) => {
             prv_img.src = result.image_url;
             inp_img.value = result.image_url;
+            style_mode.value = result.style_mode;
         })
         .catch((reason) => {
             console.log(reason)
         });
 }
+
+style_mode.addEventListener("change", () => { setStyleMode(style_mode.value) })
 
 inp_img.onchange = async function() {
     isValidImage(this.value)
