@@ -1,16 +1,16 @@
 async function setDefaultImage(url) {
     if (url.length > 300) {
-        alert("Too long url");
+        alert("Url của ảnh quá dài");
         return;
     }
     setCustomData({ image_url: url });
 }
 async function setPersonImage(url) {
     if (url.length > 300) {
-        alert("Too long url");
+        alert("Url của ảnh quá dài");
         return;
     }
-    let userId = prompt("Enter your friend id: ");
+    let userId = prompt("Id: ");
     if (!userId) return;
 
     setFriendImage(url, userId);
@@ -21,15 +21,15 @@ chrome.runtime.onInstalled.addListener((detail) => {
         chrome.notifications.create("", {
             type: "basic",
             iconUrl: "icon.png",
-            title: "Thank for your installing",
-            message: "Let change your Messenger's appearance now"
+            title: "Thanks for your installing",
+            message: "Hãy thay đổi giao diện mesenger thôi"
         });
     } else if (detail.reason == "update") {
         chrome.notifications.create("", {
             type: "basic",
             iconUrl: "icon.png",
-            title: "Thank for your updating",
-            message: "Let change your Messenger's appearance now"
+            title: "Thanks for your updating",
+            message: "Hãy thay đổi giao diện mesenger thôi"
         });
     }
 });
@@ -37,14 +37,14 @@ chrome.runtime.onInstalled.addListener((detail) => {
 chrome.contextMenus.removeAll();
 chrome.contextMenus.create({
     type: "normal",
-    title: "Set Messenger's background",
+    title: "Đặt làm nền mặc định",
     contexts: ["image"],
     id: "setDefaultImage"
 });
 
 chrome.contextMenus.create({
     type: "normal",
-    title: "Set for special person",
+    title: "Đặt cho một người",
     contexts: ["image"],
     id: "setPersonImage"
 });

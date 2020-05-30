@@ -6,22 +6,21 @@ const btn_save = document.getElementById("btn_save");
 const btn_restore = document.getElementById("btn_restore");
 
 function isValid(obj1, obj2) {
-    if (typeof (obj1) == "object" && typeof (obj2) == "object") {
+    if (typeof(obj1) == "object" && typeof(obj2) == "object") {
         let o1 = Object.keys(obj1).toString();
         let o2 = Object.keys(obj2).toString();
         if (o1 == o2) { return true } else false;
-    }
-    else return false;
+    } else return false;
 }
 
-btn_restore.addEventListener("click", async function(){
-    let ok = await confirm("Do you want to restore all setting to default? If not, click cancel");
-    if (ok){
+btn_restore.addEventListener("click", async function() {
+    let ok = await confirm("Khôi phục cài đặt gốc?");
+    if (ok) {
         setDefaultData();
     }
 });
 
-btn_style.addEventListener("click", async function () {
+btn_style.addEventListener("click", async function() {
     getDataFromLocalStorage()
         .then(result => {
             delete result.friends;
@@ -29,18 +28,18 @@ btn_style.addEventListener("click", async function () {
         })
 });
 
-btn_set.addEventListener("click", function () {
+btn_set.addEventListener("click", function() {
     getDataFromLocalStorage()
         .then(result => {
             window.navigator.clipboard.writeText(JSON.stringify(result))
         });
 });
 
-btn_save.addEventListener("click", async function () {
+btn_save.addEventListener("click", async function() {
     let local = await getDataFromLocalStorage();
     try {
         let user_setting = JSON.parse(code.value);
-        let  = JSON.parse(code.value);
+        let = JSON.parse(code.value);
         if (isValid(local, user_setting)) {
             alert("Success!")
             setCustomData(user_setting);

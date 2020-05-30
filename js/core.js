@@ -112,6 +112,6 @@ async function isValidImage(url) {
         let img = new Image();
         img.src = url;
         img.onload = () => resolve(true);
-        img.onerror = () => reject("Invalid url image");
+        img.onerror = () => reject("Invalid image url ");
     });
 }
