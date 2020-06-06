@@ -68,12 +68,14 @@ input {
     box-shadow: 1px 1px 20px 1px $background-smoke;
     transition: box-shadow 0.5s;
 }
+
 select:focus,
 input:focus {
     border: $blue-color 2px solid !important;
     outline: none;
     box-shadow: 1px 1px 7px $blue-color !important;
 }
+
 label {
     margin-bottom: 0;
 }
