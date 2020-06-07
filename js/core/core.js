@@ -106,12 +106,3 @@ async function setFriendImage(url, id) {
     }
     await setCustomData({ friends: friends });
 }
-
-async function isValidImage(url) {
-    return new Promise((resolve, reject) => {
-        let img = new Image();
-        img.src = url;
-        img.onload = () => resolve(true);
-        img.onerror = () => reject("Invalid image url ");
-    });
-}

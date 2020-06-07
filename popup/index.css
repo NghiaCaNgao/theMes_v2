@@ -1,0 +1,44 @@
+body {
+  height: auto;
+  background-color: #f0f0f0;
+  position: relative;
+}
+
+body .container {
+  width: 400px;
+  padding: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+body .container .content {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .container .preview {
+  width: 50%;
+  margin: 30px 10px 10px 10px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+/*# sourceMappingURL=index.css.map */

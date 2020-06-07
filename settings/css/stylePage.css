@@ -1,0 +1,27 @@
+body .code {
+  height: 50vh;
+  width: 100%;
+}
+
+body textarea {
+  height: 90%;
+  width: 100%;
+  display: block;
+  padding: 10px;
+  margin-top: 7px;
+  border: none;
+  border-left: #00ceb2 2px solid;
+  -webkit-transition: margin-top .3s, -webkit-box-shadow .3s;
+  transition: margin-top .3s, -webkit-box-shadow .3s;
+  transition: box-shadow .3s, margin-top .3s;
+  transition: box-shadow .3s, margin-top .3s, -webkit-box-shadow .3s;
+}
+
+body textarea:focus {
+  margin-top: 0px;
+  -webkit-box-shadow: 1px 1px 10px #f0f0f0;
+          box-shadow: 1px 1px 10px #f0f0f0;
+  border-radius: 5px;
+  outline: none;
+}
+/*# sourceMappingURL=stylePage.css.map */

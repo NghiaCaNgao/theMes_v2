@@ -1,0 +1,65 @@
+.wrap {
+  max-height: 70vh;
+  overflow-y: scroll;
+}
+
+input {
+  background-color: rgba(255, 255, 255, 0.856);
+  width: 200px;
+  height: 35px;
+  padding: 0 5px 0 5px;
+  border: none;
+  border-radius: 5px;
+  -webkit-transition: -webkit-box-shadow .5s;
+  transition: -webkit-box-shadow .5s;
+  transition: box-shadow .5s;
+  transition: box-shadow .5s, -webkit-box-shadow .5s;
+}
+
+input:focus {
+  border: #00ceb2 2px solid !important;
+  outline: none;
+  -webkit-box-shadow: 1px 1px 7px #00ceb2 !important;
+          box-shadow: 1px 1px 7px #00ceb2 !important;
+}
+
+.tool button {
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 20px;
+  margin-left: 15px;
+  background: transparent;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.tool button:hover {
+  color: white;
+}
+
+.tool button:hover.blue {
+  background-color: #00ceb2;
+  -webkit-box-shadow: 1px 1px 15px #00ceb2;
+          box-shadow: 1px 1px 15px #00ceb2;
+}
+
+.tool button:hover.red {
+  background-color: #d9828e;
+  -webkit-box-shadow: 1px 1px 15px #d9828e;
+          box-shadow: 1px 1px 15px #d9828e;
+}
+
+.panel {
+  background: rgba(255, 255, 255, 0.5);
+  margin: 10px;
+  border-radius: 5px;
+}
+
+.panel:hover {
+  background-color: #edf7f8af;
+}
+
+label {
+  margin-bottom: 0;
+}
+/*# sourceMappingURL=imageIdPage.css.map */
